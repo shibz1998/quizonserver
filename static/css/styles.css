@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+
+.wrapper{
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+
+
+
+/*SIDEBAR SECTION---------------------------------------*/
+.wrapper .sidebar{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgb(14 68 104);
+  padding: 30px 0px;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #fff;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background:white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #0c7db1;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: rgb(14 68 104);
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+
+
+/*RIGHT SIDE SECTION---------------------------------------*/
+.wrapper .section{
+  
+/*  width: calc(100% – 200px);*/
+  width: 100%;
+  height: 100%;
+  margin-left: 200px;
+  transition: all 0.5s ease;
+
+}
+
+
+/*TOP NAV SECTION---------------------------------------*/
+.wrapper .section .top_navbar{
+
+  background: rgb(14 68 104);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: 15px;
+  
+
+
+}
+
+
+
+.wrapper .section .top_navbar .hamburger a{
+  font-size: 28px;
+  color: #f4fbff;
+
+  
+}
+.wrapper .section .top_navbar .hamburger a:hover{
+  color: #a2ecff;
+}
+
+.wrapper .section .top_navbar.topnav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topnav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.topnav a:hover{
+  color: #fff;
+}
+
+/*.wrapper .top_navbar .topnav a:hover{
+  color: #f4fbff;
+}*/
+
+/*.wrapper .top_navbar .topnav a{
+
+  color: #fff;
+  
+}*/
+
+
+
+/*CONTENT SECTION---------------------------------------*/
+.info {
+  margin: 15px;
+}
+
+
+.wrapper .section .info div{
+  padding-bottom: 10px;
+}
+
+
+
+
+/*Toggle Working when in Desktop Mode---------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+  .wrapper {
+    flex-direction: column;
+  }
+  
+}
+
+body.active .wrapper .sidebar{
+  left: -225px;
+}
+
+body.active .wrapper .section{
+  margin-left: 0;
+  width: 100%;
+
+}
+
+
+
+/*Mobile View Mode Toggle Working---------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  
+  .wrapper .sidebar {
+    left: -225px;
+  }
+  
+  .wrapper .section {
+    margin-left: 0;
+    width: 100%;
+    height: calc(100% - 50px); /* Subtract the height of top_navbar */
+    overflow-y: auto;
+  }
+
+  body.active .wrapper .sidebar {
+    left: 0px;
+  }
+
+  body.active .wrapper .section {
+    display: block;
+    margin-left: 200px;
+    transition: all 0.5s ease;
+    width: calc(100% - 200px);
+  }
+}
+
+
+
+/*Extra Code---------------------------------------*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+
+/*Code Below Are after Templates Code---------------------------------------*/
+
+
+ label {
+    width: 100%;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-header{
+    color:black;
+}
+
+.card-input {
+    margin: 1px;
+    padding: 0px;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+    box-shadow: 0 0 1px 1px #2f89fc;
+    background: #2f89fc;
+    color:white;
+
+
+
+}
+
+
+.btn-group:hover {
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02);
+
+}
+
+
+   input {
+   background: #2f89fc;
+   color: white;
+   padding: 10px;
+
+
+   }
+   .full {
+      display: block;
+    width: 100%;
+   }
+
+
+.container {
+  max-width: 1127px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+    
+
+
+

@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="container">
+
+    <label>
+        <div class="card card-default card-input">
+            <div class="card-header"><h1 style="text-align:center;">Results</h1></div>
+            <div class="card-body">
+                <h3 style="text-align:center;">You scored {{ score }} out of {{length }}.</h3>
+                <br>
+            </div>
+        </div>
+    </label>
+    <br>
+    <br>
+
+    <input type="submit" value="Try another Surah" class="full" onclick="location.href='{{ url_for('item_list') }}'">
+
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<div class="container">
+
+    <label>
+        <div class="card card-default card-input">
+            <div class="card-header"><h1 style="text-align:center;">Incorrect answers <span>  &#10060;</span> </h1></div>
+            <div class="card-body">
+                {% if incorrect %}
+                <ul>
+                    {% for answer in incorrect %}
+
+                    <li> <p style="color: Black"><b>Question {{ answer['question_no'] }} : </b>{{ answer['question'] }}</p>
+
+                        <p style="color: red"> <b> You answered: </b>{{ answer['selected_answer'] }} </p>
+                        <p style="color: green"> <b>Correct answer: </b>{{ answer['correct_answer'] }}</p></li><hr>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </label>
+</div>
+
+
+
+
+<div class="container">
+
+    <label>
+        <div class="card card-default card-input">
+            <div class="card-header"><h1 style="text-align:center;">Correct Answered <span>&#9989;</span> </h1></div>
+            <div class="card-body">
+                {% if correct %}
+                <ul>
+                    {% for answer in correct %}
+
+                    <li> <p style="color: Black"><b>Question {{ answer['question_no'] }} : </b>{{ answer['question'] }}</p>
+
+                        <p style="color: green"> <b> You answered: </b>{{ answer['selected_answer'] }} </p>
+                        <p style="color: green"> <b>Correct answer: </b>{{ answer['correct_answer'] }}</p></li><hr>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </label>
+</div>
+
+
+
+
+
+
+{% endblock content %}
+

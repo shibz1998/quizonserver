@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="section-container">
+   <div class="container">
+      <div class="section-container-spacer text-center">
+         <br>
+          <h2>Surah: {{surah_name}}</h2>
+         <br>
+      </div>
+      <form id="myForm" method="post">
+         {% for i in range(questions|length) %}
+         <label>
+            <div class="card card-default card-input">
+               <div class="card-header">
+                  <h3>{{i+1}}) {{ questions[i] }}</h3>
+               </div>
+               <div class="card-body">
+                  {% for option in options[i] %}
+         <label>
+         <input class="card-input-element" type="radio" name="{{ i }}" value="{{ option }}" required>
+         <div class="card card-default card-input btn-group">
+         <div class="card-header"> {{ option }} </div>
+         </div>
+         </label>
+         <br>
+         {% endfor %}
+         </div>
+         </div>
+         </label>
+         {% endfor %}
+         <br>
+         <input type="submit" onclick="validateForm()" value="Submit" class="full"><br>
+         <p id="errorMessage" style="color:red; display:none;">You've missed a Question.Please Select an Option.</p>
+         <br>
+      </form>
+   </div>
+</div>
+{% endblock content %}

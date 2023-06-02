@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Islam Pro</title>
+      <link rel="stylesheet" href="../static/css/styles.css">
+      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+     <!-- Bootstrap Code for Top Nav bar -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Bootstrap Code -->
+
+
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="sidebar">
+            <h2>Islam Pro</h2>
+            <ul>
+               <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+               <li><a href="#"><i class="fa-solid fa-gamepad"></i>  Surah Quiz</a></li>
+               <li><a href="#"><i class="fa-solid fa-person fa-xl"></i>&nbsp Prayer</a></li>
+               <li><a href="#"><i class="fa-solid fa-hands-praying"></i>  Dua's</a></li>
+               <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+               <li><a href="#"><i class="fas fa-user"></i>My Account</a></li>
+               
+            </ul>
+<!--             <div class="social_media">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+            </div> -->
+         </div>
+         <div class="section">
+
+
+<div class="top_navbar">
+         <div class="hamburger">
+            <a href="#">
+               <i class="fas fa-bars"></i>
+            </a>
+
+         </div>
+
+      </div>
+            
+
+
+            <div class="info">
+
+               <h1>{% block title %}{% endblock %}</h1>
+
+               <div >{% block content %}{% endblock %}</div>
+
+            </div>
+         </div>
+      </div>
+   </body>
+
+<script>
+      var hamburger = document.querySelector(".hamburger");
+   hamburger.addEventListener("click", function(){
+      document.querySelector("body").classList.toggle("active");
+
+   })
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+// below are for the required field in Option quiz page
+
+         function validateForm() {
+          var radios = document.getElementsByName("option");
+          var formValid = false;
+
+          for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+              formValid = true;
+              break;
+            }
+          }
+
+          if (!formValid) {
+            document.getElementById("errorMessage").style.display = "block";
+            return false;
+          } else {
+            document.getElementById("errorMessage").style.display = "none";
+            return true;
+          }
+         }
+
+
+
+
+   
+</script>
+
+
+</html>
