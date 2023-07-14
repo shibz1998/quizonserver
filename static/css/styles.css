@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,27 +9,24 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-body{
-   background-color: #f3f5f9;
+body {
+  background-color: #f3f5f9;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
-
-
-.wrapper{
+.wrapper {
   display: flex;
   position: relative;
   height: 100%;
+
 }
 
-
-
-
 /*SIDEBAR SECTION---------------------------------------*/
-.wrapper .sidebar{
+.wrapper .sidebar {
   position: fixed;
   width: 200px;
   height: 100%;
@@ -38,42 +35,43 @@ html, body {
   top: 0;
   left: 0;
   transition: all 0.5s ease;
-
 }
 
-.wrapper .sidebar h2{
+.wrapper .sidebar h2 {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li{
-  padding: 15px;
+.wrapper .sidebar ul li {
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #bdb8d7;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  border-top: 1px solid rgba(255,255,255,0.05);
-}    
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul li a {
   color: #fff;
   display: block;
 }
 
-.wrapper .sidebar ul li a .fas{
+.wrapper .sidebar ul li a .fas {
   width: 25px;
 }
 
-.wrapper .sidebar ul li:hover{
-  background:white;
+.wrapper .sidebar ul li:hover {
+  background: white;
   border-right: 2px solid rgb(5, 68, 104);
 }
-    
-.wrapper .sidebar ul li:hover a{
+
+.wrapper .sidebar ul li:hover a {
   color: #0c7db1;
 }
- 
-.wrapper .sidebar .social_media{
+
+.wrapper .sidebar .social_media {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -81,7 +79,7 @@ html, body {
   display: flex;
 }
 
-.wrapper .sidebar .social_media a{
+.wrapper .sidebar .social_media a {
   display: block;
   width: 40px;
   background: rgb(14 68 104);
@@ -95,49 +93,28 @@ html, body {
 }
 
 
-
-
 /*RIGHT SIDE SECTION---------------------------------------*/
-.wrapper .section{
-  
-/*  width: calc(100% – 200px);*/
+.wrapper .section {
+  /* width: calc(100% – 200px); */
   width: 100%;
   height: 100%;
   margin-left: 200px;
   transition: all 0.5s ease;
-
 }
-
 
 /*TOP NAV SECTION---------------------------------------*/
-.wrapper .section .top_navbar{
-
+.wrapper .section .top_navbar {
+  display: flex;
+  flex-wrap: wrap;
   background: rgb(14 68 104);
-  height: 50px;
-  display: flex;
+  min-height: 50px;
   align-items: center;
-  padding: 0 20px;
-  margin: 15px;
-  
-
-
+  padding: 10px;
+  margin: 15px 15px 5px 15px;
 }
 
-
-
-.wrapper .section .top_navbar .hamburger a{
-  font-size: 28px;
-  color: #f4fbff;
-
-  
-}
-.wrapper .section .top_navbar .hamburger a:hover{
-  color: #a2ecff;
-}
-
-.wrapper .section .top_navbar.topnav {
-  display: flex;
-  justify-content: flex-end;
+.top_navbar .topnav {
+  margin-left: auto;
 }
 
 .topnav a {
@@ -146,72 +123,131 @@ html, body {
   margin: 0 10px;
 }
 
-.topnav a:hover{
+.topnav a:hover {
   color: #fff;
 }
 
-/*.wrapper .top_navbar .topnav a:hover{
+.wrapper .section .top_navbar .hamburger a {
+  font-size: 28px;
   color: #f4fbff;
-}*/
+}
 
-/*.wrapper .top_navbar .topnav a{
+.wrapper .section .top_navbar .hamburger a:hover {
+  color: #a2ecff;
+}
 
-  color: #fff;
-  
-}*/
 
 
 
 /*CONTENT SECTION---------------------------------------*/
+
+
 .info {
+  /* display: flex;
+  /* flex-direction: column;
+  align-items: center; */
+  margin: 0px 15px 15px 15px;
+
+  /*border: 1px solid black;*/ /* Remove it later*/
+  padding: 5px;
+  height: auto;
+}
+
+.info>div {
+  margin-top: 15px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*max-width: 1000px;*/
+}
+
+.flex-item {
+  height: 100px;
   margin: 15px;
+  padding: 25px;
+  background-color: #ddd;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 250px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  background-color: #0c7db1;
+  color: white;
+  font-size: 1.5rem;
 }
 
 
-.wrapper .section .info div{
-  padding-bottom: 10px;
+.info  {
+  text-align: center;
+  padding: 10px;
 }
+
+/* @media (max-width: 768px) {
+  .flex-item {
+    flex: 0 0 calc(100% - 10px);
+  }
+} */
 
 
 
 
 /*Toggle Working when in Desktop Mode---------------------------------------*/
 @media only screen and (max-width: 600px) {
-
   .wrapper {
     flex-direction: column;
   }
-  
 }
 
-body.active .wrapper .sidebar{
+body.active .wrapper .sidebar {
   left: -225px;
 }
 
-body.active .wrapper .section{
+body.active .wrapper .section {
   margin-left: 0;
   width: 100%;
 
 }
-
-
 
 /*Mobile View Mode Toggle Working---------------------------------------*/
 @media only screen and (max-width: 600px) {
   .wrapper {
     flex-direction: column;
   }
-  
+
   .wrapper .sidebar {
     left: -225px;
   }
-  
+
   .wrapper .section {
     margin-left: 0;
     width: 100%;
-    height: calc(100% - 50px); /* Subtract the height of top_navbar */
+    height: calc(100% - 50px);
+    /* Subtract the height of top_navbar */
     overflow-y: auto;
   }
+
+
+  .flex-item {
+    flex: 0 0 calc(100% - 10px);
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    width: 150px;
+    font-size: 1.0rem;
+  }
+
+
+
+
 
   body.active .wrapper .sidebar {
     left: 0px;
@@ -223,17 +259,24 @@ body.active .wrapper .section{
     transition: all 0.5s ease;
     width: calc(100% - 200px);
   }
+
+    body.active .topnav{
+  display:none;
+  }
+
+
+
 }
 
 
 
 /*Extra Code---------------------------------------*/
 
-.sticky {
+/*.sticky {
   position: fixed;
   top: 0;
   z-index: 999;
-}
+}*/
 
 
 /*Code Below Are after Templates Code---------------------------------------*/
@@ -249,10 +292,11 @@ body.active .wrapper .section{
 
 .card-header{
     color:black;
+
 }
 
 .card-input {
-    margin: 1px;
+    margin: 2px;
     padding: 0px;
 }
 
@@ -262,13 +306,9 @@ body.active .wrapper .section{
 
 .card-input-element:checked + .card-input {
     box-shadow: 0 0 1px 1px #2f89fc;
-    background: #2f89fc;
+    background:  grey;
     color:white;
-
-
-
 }
-
 
 .btn-group:hover {
   -ms-transform: scale(1.02); /* IE 9 */
@@ -295,14 +335,3 @@ body.active .wrapper .section{
   max-width: 1127px;
   margin: 0 auto;
 }
-
-
-
-
-
-
-
-    
-
-
-

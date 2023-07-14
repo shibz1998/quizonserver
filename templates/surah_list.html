@@ -1,35 +1,28 @@
 {% extends "layout.html" %}
+
+{% block title %}
+<h1 class="section-container-spacer text-center">Select a Surah</h1>
+<br>
+{% endblock %}
+
 {% block content %}
-<div class="container">
-   <div class="section-container-spacer text-center">
-      <br>
-      <h1 class="h2">Select Surah </h1>
-      <br>
-   </div>
-   <div class="container" >
-      <form class="form " action="{{ url_for('item_list') }}" method="post">
-         {% for item in items %}
-         <div  style="float:left;" class="col-md-4 col-lg-4 col-sm-4 ">
-            <label>
-               <input class="card-input-element" type="radio" name="item" value="{{ item }}">
-               <div class="card card-default card-input btn-group">
-                  <div class="card-header">
-                     {% if selected_item == item %}checked{% endif %}
 
-                        {{item}}
+  <form class="form" action="{{ url_for('item_list') }}" method="post">
+  <div class="flex-container">
+    {% for item in items %}
+    <div>
+      <button class="flex-item" type="radio" name="item" value="{{ item }}" {% if selected_item == item %} checked {% endif %}>
+        {{ item }}
+      </button>
+    </div>
+    {% endfor %}
+  </div>
+  </form>
 
-                  </div>
-               </div>
-            </label>
-         </div>
-         {% endfor %}
-         <br>
-         <br>
-         <br>
-         <div class="container" >
-            <input type="submit" value="Submit" class="full btn-group">
-         </div>
-      </form>
-   </div>
-</div>
+
+
+
+
+
+
 {% endblock content %}
