@@ -148,7 +148,8 @@ body {
   align-items: center; */
   margin: 0px 15px 15px 15px;
 
-  /*border: 1px solid black;*/ /* Remove it later*/
+  /*border: 1px solid black;*/
+  /* Remove it later*/
   padding: 5px;
   height: auto;
 }
@@ -168,7 +169,6 @@ body {
   height: 100px;
   margin: 15px;
   padding: 25px;
-  background-color: #ddd;
   justify-content: center;
   text-align: center;
   display: flex;
@@ -177,13 +177,12 @@ body {
   width: 250px;
   flex-basis: 150px;
   flex-grow: 1;
-  background-color: #0c7db1;
+  background-color: rgb(14 68 104);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
 }
 
-
-.info  {
+.info {
   text-align: center;
   padding: 10px;
 }
@@ -260,8 +259,8 @@ body.active .wrapper .section {
     width: calc(100% - 200px);
   }
 
-    body.active .topnav{
-  display:none;
+  body.active .topnav {
+    display: none;
   }
 
 
@@ -279,56 +278,66 @@ body.active .wrapper .section {
 }*/
 
 
+
+
+
+
+
+
+
 /*Code Below Are after Templates Code---------------------------------------*/
 
 
- label {
-    width: 100%;
+label {
+  width: 100%;
 }
 
 .card-input-element {
-    display: none;
+  display: none;
 }
 
-.card-header{
-    color:black;
+.card-header {
+  color: black;
 
 }
 
 .card-input {
-    margin: 2px;
-    padding: 0px;
+  margin: 2px;
+  padding: 0px;
 }
 
 .card-input:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.card-input-element:checked + .card-input {
-    box-shadow: 0 0 1px 1px #2f89fc;
-    background:  grey;
-    color:white;
+.card-input-element:checked+.card-input {
+  box-shadow: 0 0 1px 1px #2f89fc;
+  background: grey;
+  color: white;
 }
 
 .btn-group:hover {
-  -ms-transform: scale(1.02); /* IE 9 */
-  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  -ms-transform: scale(1.02);
+  /* IE 9 */
+  -webkit-transform: scale(1.02);
+  /* Safari 3-8 */
   transform: scale(1.02);
 
 }
 
 
-   input {
-   background: #2f89fc;
-   color: white;
-   padding: 10px;
+input {
+  background: #2f89fc;
+  color: white;
+  padding: 10px;
 
 
-   }
-   .full {
-      display: block;
-    width: 100%;
-   }
+}
+
+.full {
+  display: block;
+  width: 100%;
+}
 
 
 .container {

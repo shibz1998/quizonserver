@@ -7,17 +7,18 @@
 
 {% block content %}
 
-  <form class="form" action="{{ url_for('item_list') }}" method="post">
+<form class="form" action="{{ url_for('item_list') }}" method="post">
   <div class="flex-container">
     {% for item in items %}
     <div>
-      <button class="flex-item" type="radio" name="item" value="{{ item }}" {% if selected_item == item %} checked {% endif %}>
+      <button class="flex-item" type="radio" name="item" value="{{ item }}" {% if selected_item==item %} checked {%
+        endif %}>
         {{ item }}
       </button>
     </div>
     {% endfor %}
   </div>
-  </form>
+</form>
 
 
 
