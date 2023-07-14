@@ -6,7 +6,8 @@ import pandas as pd, random
 
 
 
-df = pd.read_csv('/home/shibz98/quizonserver/surahs-file.csv', delimiter='|')
+# df = pd.read_csv('/home/shibz98/quizonserver/surahs-file.csv', delimiter='|')
+df = pd.read_csv('surahs-file.csv', delimiter='|')
 list_surah = (set((df['surah_name']).values.ravel()))
 list_surah=(sorted(list_surah))
 #list_surah.sort(reverse=True)
